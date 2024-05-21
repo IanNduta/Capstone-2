@@ -4,3 +4,6 @@
     margin: auto auto;
     padding: 5%;
 }
+#radioForm{
+    display: block;
+}
