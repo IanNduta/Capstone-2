@@ -39,20 +39,61 @@
     </header>
 
     <main>
-        <div class="container"> </div>
-        <div class="row">
-            <div class="col">
-        
+        <h1 class="display-1 mt-3 text-center">Nature's Haven</h1>
+            <div class="container mt-5" id="formstuff">
+                <div class="row">
+                    <div class="col">
+                        <div class="mt-1">
+                            <h5>Choose Your method of search</h5>
+                            <div>
+                                <label id="byLocatiion">By Location</label>
+                                <input id="byLocatiion" type="radio" name="searchType" value="Location" checked>
+                                <label id="byParkType">By Park Name</label>
+                                <input id="byParkType" type="radio" name="searchType" value="Park" checked>
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <h5>choose your Location</h5>
+                            <select id="locationCategory" class="form-select">
+                                <option selected value="">Select one</option>
+                            </select>
+
+                            <!-- <select id="locationCategory" class="form-select">
+                                <option selected value="">Select one</option>
+                            </select> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col">
+                        <div id="formstuff">
+                            <h6>Mountain Name:</h6>
+                            <span id="customerId"></span>
+                            <h6>Description:</h6>
+                            <span id="nameOfActivity"></span>
+                            <h6>Elevation:</h6>
+                            <span id="activityDescription"></span>
+                            <h6>coordinate:</h6>
+                            <span id="activityLocation"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <div class="container"> </div>
-        <div class="row">
-            <div class="col">
-        
-            </div>
-        </div>
     </main>
+    <!-- <div class="container"> </div>
+    <div class="row">
+        <div class="col">
+    
+        </div>
+    </div>
+    
+    <div class="container"> </div>
+    <div class="row">
+        <div class="col">
+    
+        </div>
+    </div> -->
 
     <footer>
 
@@ -61,7 +102,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="scripts/site.js"></script>
+        <script src="scripts/nationalParkData.js"></script>
+        <script src="scripts/locationData.js"></script>
+        <script src="scripts/parkTypeData.js"></script>
+        <script src="scripts/locationPage.js"></script>
+        <script src="scripts/site.js"></script>
 </body>
 
 </html>
