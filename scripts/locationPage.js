@@ -3,9 +3,19 @@
 //Input
 const locationCategory = document.getElementById("locationCategory");
 const parkTypeCategory = document.getElementById("parkTypeCategory");
-// const byLocatiion = document.getElementById("byLocation");
+//location radio buttons
+const byLocation = document.getElementById("byLocation");
+const locationDiv = document.getElementById("locationDiv");
+//park type radio buttons
 const byParkType = document.getElementById("byParkType");
+const parkTypeDiv = document.getElementById("parkTypeDiv");
 //output
+//table data
+const nationalParkTabel = document.getElementById("nationalParkTabel");
+
+//asign varibles with input values
+let parkTypeSelected = byParkType.checked;
+let locationSelected = byLocation.checked;
 
 
 window.onload = function(){
@@ -15,6 +25,9 @@ window.onload = function(){
     //addDropdownOptions(locationsArray, parkTypesArray);
     populateLocationCategory();
     populateParkTypeCategory();
+    byLocation.onclick = showOrHideDropdowns;
+    byParkType.onclick = showOrHideDropdowns;
+    showOrHideDropdowns();
 }
 
 function populateLocationCategory(){
@@ -39,20 +52,49 @@ function populateParkTypeCategory(){
 
 ////
 
-function showParkTypeDiv(){
+function showOrHideDropdowns(){
+    console.log("showOrHideDropdowns");
+
+    if(byLocation.checked){
+        showLocationDiv();
+        hideParkTypeDiv();
+    }
+    else if(byParkType.checked){
+        console.log("park type")
+        showParkTypeDiv();
+        hideLocationDiv();
+    }
 
 }
+
+function showParkTypeDiv(){
+        // console.log("hi");
+        parkTypeDiv.style.display = "block";
+}
+
 
 function hideParkTypeDiv(){
-
+        parkTypeDiv.style.display = "none";
 }
+
 
 function showLocationDiv(){
-
+    locationDiv.style.display = "block";
 }
 
-function hideLocationDiv(){
 
+function hideLocationDiv(){
+        locationDiv.style.display = "none";
+
+}
+function example(){
+    console.log("hi");
+}
+
+//output
+
+function nationalParkDataTable(){
+    for(let i = 0; i < )
 }
 
 function clearResults(){
