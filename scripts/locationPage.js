@@ -11,15 +11,15 @@ const byParkType = document.getElementById("byParkType");
 const parkTypeDiv = document.getElementById("parkTypeDiv");
 //output
 //table data
-const nationalParkTabel = document.getElementById("nationalParkTabel");
+const nationalParkTable = document.getElementById("nationalParkTable");
 
 //asign varibles with input values
 let parkTypeSelected = byParkType.checked;
 let locationSelected = byLocation.checked;
 
-
 window.onload = function(){
-    //locationCategory.onchange = onChangeLocationCategory;
+    locationCategory.onchange = onChangeLocationCategory;
+    parkTypeCategory.onchange = onChangeParkTypeCategory;
     // console.log("hi");
     // addNewNationalParks();
     //addDropdownOptions(locationsArray, parkTypesArray);
@@ -28,6 +28,31 @@ window.onload = function(){
     byLocation.onclick = showOrHideDropdowns;
     byParkType.onclick = showOrHideDropdowns;
     showOrHideDropdowns();
+    // nationalParkDataTable(nationalParksArray);
+}
+
+function onChangeLocationCategory(){
+    console.log("hi");
+    // clear stuff before
+
+    let selectedLocation = locationCategory.value;
+
+    // clearTable()
+    // console.log(selectedLocation);
+    let parkFilteredByState = getParksByState(selectedLocation);
+    nationalParkDataTable(parkFilteredByState);
+    // getParksByState(selectedLocation);
+}
+
+function onChangeParkTypeCategory(){
+    let selectedParkType = parkTypeCategory.value;
+    getParksByParkType(selectedParkType);
+}
+
+//.... created a function to clear the table   ...
+function clearTable(){
+    // I want my table to be be empty every single time this function run
+    nationalParkTable.innerHTML = '';
 }
 
 function populateLocationCategory(){
@@ -35,7 +60,6 @@ function populateLocationCategory(){
         let locationOptions = document.createElement("option");
         locationOptions.value = locationsArray[i];
         locationOptions.innerHTML = locationsArray[i];
-
         locationCategory.appendChild(locationOptions);
     }
 }
@@ -48,12 +72,8 @@ function populateParkTypeCategory(){
         parkTypeCategory.appendChild(parkTypeOptions)
     }
 }
-
-
-////
-
 function showOrHideDropdowns(){
-    console.log("showOrHideDropdowns");
+    // console.log("showOrHideDropdowns");
 
     if(byLocation.checked){
         showLocationDiv();
@@ -64,115 +84,77 @@ function showOrHideDropdowns(){
         showParkTypeDiv();
         hideLocationDiv();
     }
-
 }
-
 function showParkTypeDiv(){
         // console.log("hi");
         parkTypeDiv.style.display = "block";
 }
-
-
 function hideParkTypeDiv(){
         parkTypeDiv.style.display = "none";
 }
-
-
 function showLocationDiv(){
     locationDiv.style.display = "block";
 }
-
-
 function hideLocationDiv(){
         locationDiv.style.display = "none";
-
 }
 function example(){
-    console.log("hi");
+    // console.log("hi");
 }
-
 //output
+function nationalParkDataTable(parks){
+    for(let i = 0; i < parks.length; i++){
+        //creates table row
+        let row = nationalParkTable.insertRow(-1);
+        
+        //creates table cell and add them to the data
+        let cell = row.insertCell(0);
+        cell.innerHTML = parks[i].LocationID;
 
-function nationalParkDataTable(){
-    for(let i = 0; i < )
+        let cell2 = row.insertCell(1);
+        cell2.innerHTML = parks[i].LocationName;
+
+        let cell3 = row.insertCell(2);
+        cell3.innerHTML = parks[i].Address;
+
+        let cell4 = row.insertCell(3);
+        cell4.innerHTML = parks[i].City;
+
+        let cell5 = row.insertCell(4);
+        cell5.innerHTML = parks[i].State;
+
+        let cell6 = row.insertCell(5);
+        cell6.innerHTML = parks[i].Phone;
+    }
 }
+function getParksByState(state){
+    // initializing an empty array
+    let parksResult = [];
+    //this will look through the global array of all parks, 
+    //and return a results array that only has parks that 
+    //match the location.
+    for(let i = 0; i < nationalParksArray.length; i++){
+        if(nationalParksArray[i].State === state){
+            parksResult.push(nationalParksArray[i]);
+        }
+    }
+    //this function would not directly interact with the UI
+    // console.log(parksResult);
+    return parksResult;
+}
+function getParksByParkType(parkType){
+    //similar to above but different serach criteria;
+    let parkTypeResult = [];
 
+    for(let i = 0; i < nationalParksArray.length; i++){
+        if(nationalParksArray[i].LocationName === parkType){
+            parkTypeResult.push(nationalParksArray[i]);
+        }
+    }
+    console.log(parkTypeResult);
+    return parkTypeResult;
+}
 function clearResults(){
 
 };
 
-// //when user selects a location
-// // function onChangeLocationCategory(){
-// //     // console.log("hi");
-// // }
-// //Created dropdown options for both loction and parktype 
-// function createOptionsToDropdowns(locationName, parkType){
-//     let locationOptions = document.createElement("option");
-//     let parkTypeOptions = document.createElement("option");
-
-//     locationOptions.value = locationName;
-//     locationOptions.innerHTML = locationName;
-
-//     parkTypeOptions.value = parkType;
-//     parkTypeOptions.innerHTML = parkType;
-// // console.log(parkTypeOptions);
-// console.log(locationOptions);
-//     locationCategory.appendChild(locationOptions);
-//     parkTypeCategory.appendChild(parkTypeOptions);
-// }
-
-// function addDropdownOptions(arrayType){
-//     for(let i = 0; i < arrayType.length; i++){
-//         createOptionsToDropdowns(arrayType[i])
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// //Created the options for the dropdown
-// function createNewOptions(locationName){
-//     let newParkOptions = document.createElement("option");
-//     newParkOptions.value = locationName;
-//     newParkOptions.innerHTML = locationName;
-//     // console.log(newParkOptions);
-
-//     locationCategory.appendChild(newParkOptions);
-// }
-
-// //populates the dropDown
-// function addNewNationalParks(){
-//     for(let i = 0; i < locationsArray.length; i++){
-//         // console.log(nationalParksArray[i].LocationID);
-//         createNewOptions(locationsArray[i]);
-//     }
-// }
- 
-// function pickedSearchType(){
-//     let locationPicked = byLocatiion.checked;
-//     let parkTypePicked = byParkType.checked;
-//     if(locationPicked){
-//         console.log(locationPicked);
-//     }
-// }
-
-// function findParkMatch(){
-//     let locationName = locationCategory.value;
-//     for(let i = 0; i < locationsArray.length; i++){
-//         // console.log(locationsArray[i]);
-//         if(locationsArray[i] == locationName){
-
-//         }
-//     }
-// }
