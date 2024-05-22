@@ -47,20 +47,20 @@
                         <h5>Choose Your method of search</h5>
                             <div>
                                 <label for="byLocation">By Location</label>
-                                <input id="byLocation" type="radio" name="searchType" value="Location" checked>
+                                <input id="byLocation" type="radio" name="searchType" value="Location" >
                             </div>
                             <div id="radioForm">
                                 <label for="byParkType">By Park Type</label>
-                                <input id="byParkType" type="radio" name="searchType" value="Park" checked>
+                                <input id="byParkType" type="radio" name="searchType" value="Park" >
                             </div>
 
-                        <div class="mt-4" id="locationDiv">
+                        <div class="mt-4" id="locationDiv" style="display: none;">
                             <label for="locationCategory">Choose your Location</label>
                             <select id="locationCategory" class="form-select">
                                 <option selected value="">Select one</option>
                             </select>
                         </div>
-                        <div id="parkTypeDiv" class="mt-4">
+                        <div id="parkTypeDiv" class="mt-4" style="display: none;">
                             <label for="parkTypeCategory">Select a Park Type</label>
                             <select id="parkTypeCategory" class="form-select">
                                 <option selected value="">Select one</option>
@@ -73,7 +73,7 @@
             <div class="row mt-5">
                 <div class="col">
                     <div id="formstuff">
-                        <table id="nationalParkTabel" class="table">
+                        <table  class="table">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -84,7 +84,7 @@
                                 <th scope="col">Phone Number</th>
                               </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="nationalParkTable">
                               <!-- <tr>
                                 <th scope="row">1</th>
                                 <td>Mark</td>
