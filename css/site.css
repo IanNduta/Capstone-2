@@ -2,11 +2,12 @@
     max-width: 600px;
     border: 1px solid black;
     margin: auto auto;
-    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 #radioForm{
     display: block;
 }
-tr, td{
+/* tr, td{
     border: 1px solid black;;
-}
+} */

@@ -40,19 +40,19 @@
 
     <main>
         <h1 class="display-1 mt-3 text-center">Nature's Haven</h1>
-        <div class="container mt-5" id="formstuff">
+        <div class="container mt-5 mb-5" id="formstuff">
             <div class="row">
                 <div class="col">
                     <div class="mt-1">
                         <h5>Choose Your method of search</h5>
-                            <div>
-                                <label for="byLocation">By Location</label>
-                                <input id="byLocation" type="radio" name="searchType" value="Location" >
-                            </div>
-                            <div id="radioForm">
-                                <label for="byParkType">By Park Type</label>
-                                <input id="byParkType" type="radio" name="searchType" value="Park" >
-                            </div>
+                        <div>
+                            <label for="byLocation">By Location</label>
+                            <input id="byLocation" type="radio" name="searchType" value="Location">
+                        </div>
+                        <div id="radioForm">
+                            <label for="byParkType">By Park Type</label>
+                            <input id="byParkType" type="radio" name="searchType" value="Park">
+                        </div>
 
                         <div class="mt-4" id="locationDiv" style="display: none;">
                             <label for="locationCategory">Choose your Location</label>
@@ -72,38 +72,21 @@
 
             <div class="row mt-5">
                 <div class="col">
-                    <div id="formstuff">
-                        <table  class="table">
+                    <div>
+                        <table class="table table-striped">
                             <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Address</th>
-                                <th scope="col">city</th>
-                                <th scope="col">state</th>
-                                <th scope="col">Phone Number</th>
-                              </tr>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">city</th>
+                                    <th scope="col">state</th>
+                                    <th scope="col">Phone Number</th>
+                                </tr>
                             </thead>
-                            <tbody id="nationalParkTable">
-                              <!-- <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                              </tr> -->
+                            <tbody class="table-group-divider" id="nationalParkTable">
                             </tbody>
-                          </table>
+                        </table>
                     </div>
                 </div>
             </div>
