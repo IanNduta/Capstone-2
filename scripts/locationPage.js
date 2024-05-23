@@ -32,6 +32,7 @@ window.onload = function(){
 }
 
 function onChangeLocationCategory(){
+    clearResults();
     console.log("hi");
     // clear stuff before
 
@@ -45,14 +46,12 @@ function onChangeLocationCategory(){
 }
 
 function onChangeParkTypeCategory(){
+    clearResults();
+    console.log("hi");
     let selectedParkType = parkTypeCategory.value;
-    getParksByParkType(selectedParkType);
-}
-
-//.... created a function to clear the table   ...
-function clearTable(){
-    // I want my table to be be empty every single time this function run
-    nationalParkTable.innerHTML = '';
+    console.log(selectedParkType);
+    let parkFilteredByParkType = getParksByParkType(selectedParkType);
+    nationalParkDataTable(parkFilteredByParkType);
 }
 
 function populateLocationCategory(){
@@ -63,6 +62,8 @@ function populateLocationCategory(){
         locationCategory.appendChild(locationOptions);
     }
 }
+
+
 function populateParkTypeCategory(){
     for(let i = 0; i < parkTypesArray.length; i++){
         let parkTypeOptions = document.createElement("option");
@@ -72,6 +73,8 @@ function populateParkTypeCategory(){
         parkTypeCategory.appendChild(parkTypeOptions)
     }
 }
+
+
 function showOrHideDropdowns(){
     // console.log("showOrHideDropdowns");
 
@@ -85,6 +88,8 @@ function showOrHideDropdowns(){
         hideLocationDiv();
     }
 }
+
+
 function showParkTypeDiv(){
         // console.log("hi");
         parkTypeDiv.style.display = "block";
@@ -101,6 +106,8 @@ function hideLocationDiv(){
 function example(){
     // console.log("hi");
 }
+
+
 //output
 function nationalParkDataTable(parks){
     for(let i = 0; i < parks.length; i++){
@@ -127,6 +134,8 @@ function nationalParkDataTable(parks){
         cell6.innerHTML = parks[i].Phone;
     }
 }
+
+
 function getParksByState(state){
     // initializing an empty array
     let parksResult = [];
@@ -142,12 +151,14 @@ function getParksByState(state){
     // console.log(parksResult);
     return parksResult;
 }
+
+
 function getParksByParkType(parkType){
     //similar to above but different serach criteria;
     let parkTypeResult = [];
 
     for(let i = 0; i < nationalParksArray.length; i++){
-        if(nationalParksArray[i].LocationName === parkType){
+        if(nationalParksArray[i].LocationName.indexOf(parkType) >= 0){
             parkTypeResult.push(nationalParksArray[i]);
         }
     }
@@ -155,6 +166,23 @@ function getParksByParkType(parkType){
     return parkTypeResult;
 }
 function clearResults(){
-
+    nationalParkTable.innerHTML = '';
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+//.... created a function to clear the table   ...
+// function clearTable(){
+//     // I want my table to be be empty every single time this function run
+//     nationalParkTable.innerHTML = '';
+// }
