@@ -8,13 +8,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="css/site.css" rel="stylesheet">
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Freeman&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+            rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">Nature's Haven</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +45,141 @@
     </header>
 
     <main>
-        <h1 class="display-1 mt-3 text-center">Nature's Haven</h1>
+
+
+        <figure class="text-center mt-4">
+            <blockquote class="blockquote">
+                <p class="h1">Majestic Peaks: Exploring Nature's Haven in the Mountains</p>
+            </blockquote>
+        </figure>
+
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col">
+                    <img src="images/Hancock-StoryImage_2.jpg" class="card-img-top" alt="mountains">
+                </div>
+                <div class="col">
+                    <p class="freeman-regular">Step into a realm where the earth touches the sky, and adventure awaits
+                        around every corner. Nature's Haven, a national park nestled amidst majestic mountains, invites
+                        you
+                        to embark on an unforgettable journey into the heart of untamed beauty. Our webpage serves as
+                        your
+                        gateway to discovering the wonders that await within these lofty peaks. Here, you'll find a
+                        wealth
+                        of resources and services to enhance your mountain experience:</p>
+                    <p><b>Trail Guides:</b> Explore our curated selection of hiking trails, ranging from leisurely
+                        strolls
+                        to challenging treks, each offering its own unique glimpse into the wilderness.</p>
+                    <p><b>Scenic Overlooks:</b>Scenic Overlooks: Discover the best vantage points to behold panoramic
+                        views
+                        of snow-capped peaks, lush valleys, and cascading waterfalls.</p>
+                    <p><b>Visitor Information:</b> Plan your visit with ease using our comprehensive visitor
+                        information,
+                        including park hours, entrance fees, and seasonal highlights.</p>
+                    <fieldset><b>Adventure Activities:</b> Indulge your adventurous spirit with activities such as rock
+                        climbing, whitewater rafting, and zip-lining.</p>
+                        <p><b>Camping and Lodging:</b> Immerse yourself in nature with a variety of camping options or
+                            unwind in cozy lodges nestled amidst the mountains.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col">
+                    <p>"Nature's Haven's mountain page offers an interactive experience, empowering users to select
+                        their
+                        desired mountain from a convenient dropdown menu. Once chosen, users are treated to immersive
+                        descriptions, providing rich insights into the chosen mountain's geography, history, and unique
+                        features, fostering a deeper connection with nature's majestic peaks."</p>
+                </div>
+                <div class="col">
+                    <h5>Instructions for Selecting a Mountain and Exploring Descriptions</h5>
+                    <ul>
+                        <li>Click on the dropdown menu to reveal a list of available mountains.</li>
+                        <li>Scroll through the list or type the name of the desired mountain to quickly locate it.</li>
+                        <li>Click on the name of the mountain you wish to learn about.</li>
+                        <li>Once selected, the page will refresh, displaying detailed descriptions, including geography,
+                            history, and unique
+                            features of the chosen mountain.</li>
+                        <li>Enjoy exploring and learning about the majestic mountain of your choice!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Dropdown for the mountains -->
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="col">
+                            <h5>Choose which mountain you would like to viste</h5>
+                            <select id="mountainCategory" class="form-select" aria-label="Default select example">
+                                <option selected value="">Select one</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Displays the results  -->
+        <div class="container">
+            <div class="row mt-5 mb-5">
+                <div class="col">
+                    <div class="card w-auto">
+                        <!-- <div class="card-header">
+                        Description
+                    </div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Description</h5>
+                            <p id="mountainDescription" class="card-text"></p>
+                            <span id="mountainDescription"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card w-auto">
+                        <!-- <div class="card-header">
+                        Elevation
+                    </div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Elevation</h5>
+                            <p id="elevationInfo" class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card w-auto">
+                        <!-- <div class="card-header">
+                        Difficulty of hike
+                    </div> -->
+                        <div class="card-body">
+                            <h5 class="card-title"> Difficulty of hike</h5>
+                            <p id="difficultyLevel" class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5" style="display: none;">
+            <div class="col">
+                <div id="formstuff">
+                    <h6>Mountain Name:</h6>
+                    <span id="mountainName"></span>
+                    <h6>Description:</h6>
+                    <span id="mountainDescription"></span>
+                    <h6>Elevation:</h6>
+                    <span id="elevationInfo"></span>
+                    <h6>difficulty of hike:</h6>
+                    <span id="difficultyLevel"></span>
+                    <h6>coordinate:</h6>
+                    <span id="coordinates"></span>
+                </div>
+            </div>
+        </div>
+        <!-- <h1 class="display-1 mt-3 text-center">Nature's Haven</h1>
         <div class="container mt-5" id="formstuff">
             <div class="row">
                 <div class="col">
@@ -52,23 +192,8 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
-                <div class="col">
-                    <div id="formstuff">
-                        <h6>Mountain Name:</h6>
-                        <span id="mountainName"></span>
-                        <h6>Description:</h6>
-                        <span id="mountainDescription"></span>
-                        <h6>Elevation:</h6>
-                        <span id="elevationInfo"></span>
-                        <h6>difficulty of hike:</h6>
-                        <span id="difficultyLevel"></span>
-                        <h6>coordinate:</h6>
-                        <span id="coordinates"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        </div> -->
     </main>
     <footer>
 
