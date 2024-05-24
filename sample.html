@@ -43,62 +43,372 @@
         </nav>
 
     </header>
-    <figure class="text-center mt-4">
-        <blockquote class="blockquote">
-            <p class="h1">Majestic Peaks: Exploring Nature's Haven in the Mountains</p>
-        </blockquote>
-    </figure>
+    <main>
+        <div class="container">
+            <img src="images/Hancock-StoryImage_2.jpg" class="card-img-top" alt="mountains">
+        </div>
+        <h1 class="text-center mt-2">What We have to offer</h1>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col">
+                    <p>Welcome to Nature's Haven, where the beauty and tranquility of our national parks offer an
+                        unforgettable escape into nature. Our parks are home to diverse ecosystems, majestic landscapes,
+                        and a variety of wildlife, providing visitors with a unique opportunity to connect with the
+                        natural world. Whether you're seeking adventure on rugged trails, peace by serene lakes, or the
+                        awe-inspiring sight of towering mountains, our national parks have something for everyone. Each
+                        park is meticulously preserved to ensure that future generations can experience the same
+                        unspoiled beauty and wonder that they offer today.</p>
+                </div>
+                <div class="col">
+                    <p>At Nature's Haven, we believe in the power of nature to inspire and rejuvenate. Our parks are not
+                        just places to visit but spaces to experience and cherish. From educational programs that teach
+                        the importance of conservation to guided tours that highlight the unique features of each park,
+                        we strive to enhance your visit and deepen your appreciation for nature. As you explore our
+                        parks, you'll discover the rich history and cultural significance that make each location
+                        special. Join us in celebrating the natural world and help us protect these precious landscapes
+                        for years to come.</p>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-center mt-2">Ready to explore</h1>
 
-    <div class="container">
-        <div class="row mt-4">
-            <div class="col">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col">
+                    <p>Searching for a national park on Nature's Haven is an easy and intuitive process, designed to
+                        help you find your perfect natural getaway. You can begin your search by selecting either the
+                        type of park or its location</p>
+                </div>
+                <div class="col">
+                    <h4>Choose your search method</h4>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <div>
+                                <label for="byLocation">By Location</label>
+                                <input id="byLocation" type="radio" name="searchType" value="Location">
+                            </div>
+                            <div id="radioForm">
+                                <label for="byParkType">By Park Type</label>
+                                <input id="byParkType" type="radio" name="searchType" value="Park">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="mt-4" id="locationDiv" style="display: none;">
+                <label for="locationCategory">Choose your Location</label>
+                <select id="locationCategory" class="form-select">
+                    <option selected value="">Select one</option>
+                </select>
+            </div>
+            <div id="parkTypeDiv" class="mt-4" style="display: none;">
+                <label for="parkTypeCategory">Select a Park Type</label>
+                <select id="parkTypeCategory" class="form-select">
+                    <option selected value="">Select one</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row mt-5">
+                        <div class="col">
+                            <div>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Address</th>
+                                            <th scope="col">city</th>
+                                            <th scope="col">state</th>
+                                            <th scope="col">Phone Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="nationalParkTable">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 mb-5" id="formstuff" style="display: none;">
+            <div class="row">
+                <div class="col">
+                    <div class="mt-1">
+                        <h5>Choose Your method of search</h5>
+                        <div>
+                            <label for="byLocation">By Location</label>
+                            <input id="byLocation" type="radio" name="searchType" value="Location">
+                        </div>
+                        <div id="radioForm">
+                            <label for="byParkType">By Park Type</label>
+                            <input id="byParkType" type="radio" name="searchType" value="Park">
+                        </div>
+
+                        <div class="mt-4" id="locationDiv" style="display: none;">
+                            <label for="locationCategory">Choose your Location</label>
+                            <select id="locationCategory" class="form-select">
+                                <option selected value="">Select one</option>
+                            </select>
+                        </div>
+                        <div id="parkTypeDiv" class="mt-4" style="display: none;">
+                            <label for="parkTypeCategory">Select a Park Type</label>
+                            <select id="parkTypeCategory" class="form-select">
+                                <option selected value="">Select one</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col">
+                    <div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">city</th>
+                                    <th scope="col">state</th>
+                                    <th scope="col">Phone Number</th>
+                                </tr>
+                            </thead>
+                            <tbody id="nationalParkTable">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="scripts/nationalParkData.js"></script>
+    <script src="scripts/locationData.js"></script>
+    <script src="scripts/parkTypeData.js"></script>
+    <script src="scripts/locationPage.js"></script>
+    <script src="scripts/site.js"></script>
+</body>
+
+</html>
+<!-- <figure class="text-center mt-4">
+    <blockquote class="blockquote">
+        <p class="h1">Majestic Peaks: Exploring Nature's Haven in the Mountains</p>
+    </blockquote>
+</figure>
+
+<div class="container">
+    <div class="row mt-4">
+        <div class="col">
+            <img src="images/Hancock-StoryImage_2.jpg" class="card-img-top" alt="mountains">
+        </div>
+        <div class="col">
+            <p class="freeman-regular">Step into a realm where the earth touches the sky, and adventure awaits
+                around every corner. Nature's Haven, a national park nestled amidst majestic mountains, invites
+                you
+                to embark on an unforgettable journey into the heart of untamed beauty. Our webpage serves as
+                your
+                gateway to discovering the wonders that await within these lofty peaks. Here, you'll find a
+                wealth
+                of resources and services to enhance your mountain experience:</p>
+            <p><b>Trail Guides:</b> Explore our curated selection of hiking trails, ranging from leisurely
+                strolls
+                to challenging treks, each offering its own unique glimpse into the wilderness.</p>
+            <p><b>Scenic Overlooks:</b>Scenic Overlooks: Discover the best vantage points to behold panoramic
+                views
+                of snow-capped peaks, lush valleys, and cascading waterfalls.</p>
+            <p><b>Visitor Information:</b> Plan your visit with ease using our comprehensive visitor
+                information,
+                including park hours, entrance fees, and seasonal highlights.</p>
+            <fieldset><b>Adventure Activities:</b> Indulge your adventurous spirit with activities such as rock
+                climbing, whitewater rafting, and zip-lining.</p>
+                <p><b>Camping and Lodging:</b> Immerse yourself in nature with a variety of camping options or
+                    unwind in cozy lodges nestled amidst the mountains.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mt-4">
+        <div class="col">
+            <p>"Nature's Haven's mountain page offers an interactive experience, empowering users to select
+                their
+                desired mountain from a convenient dropdown menu. Once chosen, users are treated to immersive
+                descriptions, providing rich insights into the chosen mountain's geography, history, and unique
+                features, fostering a deeper connection with nature's majestic peaks."</p>
+        </div>
+        <div class="col">
+            <h5>Instructions for Selecting a Mountain and Exploring Descriptions</h5>
+            <ul>
+                <li>Click on the dropdown menu to reveal a list of available mountains.</li>
+                <li>Scroll through the list or type the name of the desired mountain to quickly locate it.</li>
+                <li>Click on the name of the mountain you wish to learn about.</li>
+                <li>Once selected, the page will refresh, displaying detailed descriptions, including geography,
+                    history, and unique
+                    features of the chosen mountain.</li>
+                <li>Enjoy exploring and learning about the majestic mountain of your choice!</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Dropdown for the mountains -->
+<!-- <div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+                <div class="col">
+                    <h5>Choose which mountain you would like to viste</h5>
+                    <select id="mountainCategory" class="form-select" aria-label="Default select example">
+                        <option selected value="">Select one</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!--Displays the results  -->
+<!-- <div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col">
+            <div class="card w-auto"> -->
+<!-- <div class="card-header">
+                Description
+            </div> -->
+<!-- <div class="card-body">
+                    <h5 class="card-title">Description</h5>
+                    <p id="mountainDescription" class="card-text"></p>
+                    <span id="mountainDescription"></span>
+                </div>
+            </div>
+        </div> -->
+<!-- <div class="col">
+            <div class="card w-auto"> -->
+<!-- <div class="card-header">
+                Elevation
+            </div> -->
+<!-- <div class="card-body">
+                    <h5 class="card-title">Elevation</h5>
+                    <p id="elevationInfo" class="card-text"></p>
+                </div>
+            </div>
+        </div> -->
+<!-- <div class="col">
+            <div class="card w-auto"> -->
+<!-- <div class="card-header">
+                Difficulty of hike
+            </div> -->
+<!-- <div class="card-body">
+                    <h5 class="card-title"> Difficulty of hike</h5>
+                    <p id="coordinates" class="card-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- fjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj -->
+<!-- <div class="container">
+    <div class="rol mb-5">
+        <div class="rol">
+            <div class="card text-bg-dark w-auto">
                 <img src="images/Hancock-StoryImage_2.jpg" class="card-img-top" alt="mountains">
-            </div>
-            <div class="col">
-                <p class="freeman-regular">Step into a realm where the earth touches the sky, and adventure awaits
-                    around every corner. Nature's Haven, a national park nestled amidst majestic mountains, invites you
-                    to embark on an unforgettable journey into the heart of untamed beauty. Our webpage serves as your
-                    gateway to discovering the wonders that await within these lofty peaks. Here, you'll find a wealth
-                    of resources and services to enhance your mountain experience:</p>
-                <p><b>Trail Guides:</b> Explore our curated selection of hiking trails, ranging from leisurely strolls
-                    to challenging treks, each offering its own unique glimpse into the wilderness.</p>
-                <p><b>Scenic Overlooks:</b>Scenic Overlooks: Discover the best vantage points to behold panoramic views
-                    of snow-capped peaks, lush valleys, and cascading waterfalls.</p>
-                <p><b>Visitor Information:</b> Plan your visit with ease using our comprehensive visitor information,
-                    including park hours, entrance fees, and seasonal highlights.</p>
-                <fieldset><b>Adventure Activities:</b> Indulge your adventurous spirit with activities such as rock
-                    climbing, whitewater rafting, and zip-lining.</p>
-                    <p><b>Camping and Lodging:</b> Immerse yourself in nature with a variety of camping options or
-                        unwind in cozy lodges nestled amidst the mountains.</p>
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="container">
-        <div class="row mt-4">
-            <div class="col">
-                <p>"Nature's Haven's mountain page offers an interactive experience, empowering users to select their
-                    desired mountain from a convenient dropdown menu. Once chosen, users are treated to immersive
-                    descriptions, providing rich insights into the chosen mountain's geography, history, and unique
-                    features, fostering a deeper connection with nature's majestic peaks."</p>
-            </div>
-            <div class="col">
-                <h5>Instructions for Selecting a Mountain and Exploring Descriptions</h5>
-                <ul>
-                    <li>Click on the dropdown menu to reveal a list of available mountains.</li>
-                    <li>Scroll through the list or type the name of the desired mountain to quickly locate it.</li>
-                    <li>Click on the name of the mountain you wish to learn about.</li>
-                    <li>Once selected, the page will refresh, displaying detailed descriptions, including geography,
-                        history, and unique
-                        features of the chosen mountain.</li>
-                    <li>Enjoy exploring and learning about the majestic mountain of your choice!</li>
-                </ul>
-            </div>
+
+<div class="row mt-5" style="display: none;">
+    <div class="col">
+        <div id="formstuff">
+            <h6>Mountain Name:</h6>
+            <span id="mountainName"></span>
+            <h6>Description:</h6>
+            <span id="mountainDescription"></span>
+            <h6>Elevation:</h6>
+            <span id="elevationInfo"></span>
+            <h6>difficulty of hike:</h6>
+            <span id="difficultyLevel"></span>
+            <h6>coordinate:</h6>
+            <span id="coordinates"></span>
         </div>
     </div>
+</div> -->
 
-    <!-- <div class="card mb-3"> -->
-    <!-- <img src="..." class="card-img-top" alt="...">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="card mb-3"> -->
+<!-- <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -113,17 +423,26 @@
             </div>
             <img src="..." class="card-img-bottom" alt="...">
           </div> -->
-    </main>
 
-
-    <footer>
-
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="scripts/site.js"></script>
-</body>
-
-</html>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

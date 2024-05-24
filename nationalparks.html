@@ -8,13 +8,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="css/site.css" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Freeman&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">Nature's Haven</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -39,8 +45,102 @@
     </header>
 
     <main>
-        <h1 class="display-1 mt-3 text-center">Nature's Haven</h1>
-        <div class="container mt-5 mb-5" id="formstuff">
+        <div class="container">
+            <img src="images/Hancock-StoryImage_2.jpg" class="card-img-top" alt="mountains">
+        </div>
+        <h1 class="text-center mt-2">What We have to offer</h1>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col">
+                    <p>Welcome to Nature's Haven, where the beauty and tranquility of our national parks offer an
+                        unforgettable escape into nature. Our parks are home to diverse ecosystems, majestic landscapes,
+                        and a variety of wildlife, providing visitors with a unique opportunity to connect with the
+                        natural world. Whether you're seeking adventure on rugged trails, peace by serene lakes, or the
+                        awe-inspiring sight of towering mountains, our national parks have something for everyone. Each
+                        park is meticulously preserved to ensure that future generations can experience the same
+                        unspoiled beauty and wonder that they offer today.</p>
+                </div>
+                <div class="col">
+                    <p>At Nature's Haven, we believe in the power of nature to inspire and rejuvenate. Our parks are not
+                        just places to visit but spaces to experience and cherish. From educational programs that teach
+                        the importance of conservation to guided tours that highlight the unique features of each park,
+                        we strive to enhance your visit and deepen your appreciation for nature. As you explore our
+                        parks, you'll discover the rich history and cultural significance that make each location
+                        special. Join us in celebrating the natural world and help us protect these precious landscapes
+                        for years to come.</p>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-center mt-2">Ready to explore</h1>
+
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col">
+                    <p>Searching for a national park on Nature's Haven is an easy and intuitive process, designed to
+                        help you find your perfect natural getaway. You can begin your search by selecting either the
+                        type of park or its location</p>
+                </div>
+                <div class="col">
+                    <h4>Choose your search method</h4>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <div>
+                                <label for="byLocation">By Location</label>
+                                <input id="byLocation" type="radio" name="searchType" value="Location">
+                            </div>
+                            <div id="radioForm">
+                                <label for="byParkType">By Park Type</label>
+                                <input id="byParkType" type="radio" name="searchType" value="Park">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="mt-4" id="locationDiv" style="display: none;">
+                <label for="locationCategory">Choose your Location</label>
+                <select id="locationCategory" class="form-select">
+                    <option selected value="">Select one</option>
+                </select>
+            </div>
+            <div id="parkTypeDiv" class="mt-4" style="display: none;">
+                <label for="parkTypeCategory">Select a Park Type</label>
+                <select id="parkTypeCategory" class="form-select">
+                    <option selected value="">Select one</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row mt-5">
+                        <div class="col">
+                            <div>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Address</th>
+                                            <th scope="col">city</th>
+                                            <th scope="col">state</th>
+                                            <th scope="col">Phone Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="nationalParkTable">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 mb-5" id="formstuff" style="display: none;">
             <div class="row">
                 <div class="col">
                     <div class="mt-1">
@@ -92,20 +192,6 @@
             </div>
         </div>
     </main>
-    <!-- <div class="container"> </div>
-    <div class="row">
-        <div class="col">
-    
-        </div>
-    </div>
-    
-    <div class="container"> </div>
-    <div class="row">
-        <div class="col">
-    
-        </div>
-    </div> -->
-
     <footer>
 
     </footer>
@@ -121,3 +207,68 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h1 class="display-1 mt-3 text-center">Nature's Haven</h1>
+<div class="container mt-5 mb-5" id="formstuff">
+    <div class="row">
+        <div class="col">
+            <div class="mt-1">
+                <h5>Choose Your method of search</h5>
+                <div>
+                    <label for="byLocation">By Location</label>
+                    <input id="byLocation" type="radio" name="searchType" value="Location">
+                </div>
+                <div id="radioForm">
+                    <label for="byParkType">By Park Type</label>
+                    <input id="byParkType" type="radio" name="searchType" value="Park">
+                </div>
+
+                <div class="mt-4" id="locationDiv" style="display: none;">
+                    <label for="locationCategory">Choose your Location</label>
+                    <select id="locationCategory" class="form-select">
+                        <option selected value="">Select one</option>
+                    </select>
+                </div>
+                <div id="parkTypeDiv" class="mt-4" style="display: none;">
+                    <label for="parkTypeCategory">Select a Park Type</label>
+                    <select id="parkTypeCategory" class="form-select">
+                        <option selected value="">Select one</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col">
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">city</th>
+                            <th scope="col">state</th>
+                            <th scope="col">Phone Number</th>
+                        </tr>
+                    </thead>
+                    <tbody id="nationalParkTable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> -->
